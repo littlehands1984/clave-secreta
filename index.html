@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head><!--Declaración del HEADER-->
+        <meta charset="UTF-8">
+        <title>Llave Secreta</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    </head>
+    
+    <body>
+
+        <div class="presentacion">
+            <header>
+                <h1>¡Mensajes Enigmáticos! <strong class="destaque">Descifra el código, descubre el secreto.</strong></h1>
+            </header>
+            <aside><!--Area para la imagen con la página web.-->
+                <img class="imagen" src="./assets/Enigma.jpg" alt="Imagen con simbolos de encriptación">
+            </aside>
+            <section class="principal">
+                <!--Area para los inputs de entrada y salida de texto, así como los botones
+                de encriptación y desencriptación del mensaje.-->
+                <form id="formulario">
+                    <textarea class="principal__cajaTexto" id="textoUsuario" placeholder="Ingresa un texto aquí"></textarea>
+                </form>
+                <textarea class="principal__cajaTexto" id="mensajeSalida" value="Texto para copiar" placeholder="Esperando mensaje..." readonly="readonly"></textarea>
+                <div class="principal__botones">
+                    <a class="boton" onclick="encriptar()">Encriptar</a>
+                    <a class="boton" onclick="desencriptar()">Desencriptar</a>
+                    <a class="boton" id="copiarMensaje">Copiar mensaje</a>
+                    <a class="boton" id="limpieza" onclick="condicionesIniciales()">Reiniciar</a>
+                </div>
+                <p class="principal__mensajeUsuario"></p><!--Inserción del mensaje de interacción con el usuario-->
+            </section>
+        </div>
+        <footer>
+            <!--Area para posicionar derechos de autor y demás información relevante de contacto-->
+            <a>Derechos reservados @Curly1984</a>
+        </footer>
+
+        <script src="app.js" defer></script><!--Inserción del archivo JavaScript-->
+
+    </body>
+</html>
